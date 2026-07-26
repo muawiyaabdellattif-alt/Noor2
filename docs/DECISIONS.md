@@ -70,3 +70,47 @@ Mandatory rules:
 - Any future source-version change requires a new approved decision and verification report.
 
 This decision resolves GitHub issue #2.
+
+## DEC-008 — Android Technical Architecture
+
+Status: Accepted
+
+The approved Android technical architecture for NOOR2 is:
+
+- Primary language: Kotlin.
+- Minimum Android version: Android 8.0, API 26.
+- User-interface framework: Jetpack Compose.
+- Application model: Single Activity.
+- Architectural layers: UI, Domain and Data.
+- State management: ViewModel with StateFlow.
+- UI data flow: Unidirectional Data Flow.
+- Structured local database: Room over SQLite.
+- Application settings: DataStore.
+- Dependency injection: Hilt.
+- Concurrency and reactive streams: Kotlin Coroutines and Flow.
+- Navigation: Navigation Compose.
+- Quran audio playback: AndroidX Media3 ExoPlayer.
+- Background audio: MediaLibraryService.
+- Audio downloads: Media3 DownloadService.
+- Deferred background work: WorkManager.
+- Product direction: local-first and no account required for core use.
+
+Initial modules:
+
+- `app`
+- `core:model`
+- `core:database`
+- `core:datastore`
+- `core:designsystem`
+- `core:testing`
+- `feature:mushaf`
+- `feature:search`
+- `feature:audio`
+- `feature:library`
+- `feature:settings`
+
+The full-page Madinah Mushaf renderer must remain isolated behind the `feature:mushaf` boundary.
+
+The exact local page-asset format and packaging method must be validated through a prototype before being treated as final.
+
+This decision resolves GitHub issue #3.
