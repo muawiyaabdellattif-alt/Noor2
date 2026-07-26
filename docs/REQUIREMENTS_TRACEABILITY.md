@@ -91,15 +91,15 @@ Create the first GitHub issues for:
 | Issue | Purpose | Related Requirements | Status |
 |---|---|---|---|
 | #1 | Approve Android application identity | Project foundation | Completed |
-| #2 | Approve Quran text source and licensing | MVP-001, NFR-004 | Open |
+| #2 | Approve Quran text source and licensing | MVP-001, NFR-004 | Completed |
 | #3 | Define Android technical architecture | All technical requirements | Open |
 | #4 | Import and audit previous NOOR2 source code | Migration and source audit | Open |
 | #5 | Establish a reproducible Android build | Build and testing foundation | Open |
 
 ## Current Priority Order
 
-1. Resolve issue #1: application identity.
-2. Resolve issue #2: Quran text source and licensing.
-3. Resolve issue #3: Android architecture.
+1. Issue #1 completed: application identity approved.
+2. Issue #2 completed: Tanzil version 1.1 approved.
+3. Resolve issue #3: Android architecture (current priority).
 4. Begin issue #4 when previous source files are available.
 5. Begin issue #5 from a full computer development environment.
