@@ -1,52 +1,65 @@
 # NOOR2 Quran Content Policy
 
-## Approved Source
+## Primary Reader
 
-- Provider: Tanzil Project
-- Approved version: 1.1
-- Display text: Uthmani
-- Search text: Simple Clean
-- Official source: https://tanzil.net
+The default Quran reader must display complete pages matching the printed Madinah Mushaf.
 
-## Integrity Rules
+- Narration: Hafs from Asim.
+- Visual source: official digital Madinah Mushaf issued by King Fahd Glorious Quran Printing Complex.
+- Reading style: complete Mushaf pages.
+- Offline availability: required.
+- Verse cards: prohibited as the primary reading interface.
+- Reflowed individual ayat: prohibited in the default reader.
 
-1. Canonical Quran text is immutable.
-2. Application formatting must not alter stored Quran text.
-3. Search normalization must not overwrite canonical content.
-4. Every source file requires a SHA-256 checksum.
-5. The application database must preserve stable Surah and Ayah identifiers.
-6. Imported content must be checked against the approved source package.
-7. Quran content updates require documented review and migration tests.
+## Reader Interaction
 
-## License Compliance
+Users may:
 
-NOOR2 must:
+- Turn complete pages.
+- Zoom without changing the page composition.
+- Select an ayah through an invisible or translucent overlay.
+- Play an ayah.
+- Open tafsir or translation.
+- Add a bookmark or note.
 
-- Credit Tanzil Project clearly.
-- Provide a link to Tanzil.
-- Preserve the required copyright and license notice.
-- Distribute Quran text only as an unchanged copy.
-- Record the source version used in every release.
+These interactions must not change the original page layout.
 
-## Import Workflow
+## Text and Search Data
 
-Before importing Quran data:
+Structured Quran text may be used internally for:
 
-1. Download the approved files from the official Tanzil source.
-2. Preserve the original files without modification.
-3. Generate SHA-256 checksums.
-4. Record file names, sizes and checksums.
-5. Validate the expected Surah and Ayah mapping.
-6. Build application databases from a reproducible import script.
-7. Compare imported output against the approved source.
-8. Retain the verification report under `docs/evidence/`.
+- Offline search.
+- Ayah identification.
+- Audio synchronization.
+- Bookmarks.
+- Tafsir and translation links.
+- Accessibility support.
+
+Internal text data must remain aligned with the visible Mushaf page and must never replace it in the primary reader.
+
+## Integrity Requirements
+
+- Original page assets must remain immutable.
+- Every source asset must have a SHA-256 checksum.
+- Page-to-ayah mapping must be verified.
+- Surah, ayah, juz and page identifiers must remain stable.
+- No page may be manually edited.
+- Any conversion of official source assets must be reproducible and verified.
+- Visual comparison tests must be performed against the approved Madinah Mushaf.
+
+## Accessibility
+
+A separate accessible text presentation may be provided for TalkBack and large-text users.
+
+It must be clearly identified as an accessibility mode and must not replace the full-page Mushaf as the default visual experience.
 
 ## Release Gate
 
-A release must not ship Quran content unless:
+No Quran reader release is permitted unless:
 
-- Source attribution is visible.
-- License obligations are satisfied.
-- Checksums are recorded.
-- Corpus verification succeeds.
-- No unexplained text difference exists.
+- Complete-page rendering is verified.
+- Page order is verified.
+- Page-to-ayah mapping is verified.
+- Offline reading succeeds.
+- Source rights and attribution are documented.
+- No unexplained visual or textual difference exists.
