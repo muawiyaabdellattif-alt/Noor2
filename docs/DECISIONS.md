@@ -27,3 +27,19 @@ Core Quran reading functionality should remain available without an internet con
 Status: Accepted
 
 The Android technology stack, database, dependency-injection framework, Quran data source, and module structure must not be treated as final until documented and approved.
+
+## DEC-005 — Android Application Identity
+
+Status: Accepted
+
+The official NOOR2 Android application identity is:
+
+- Arabic display name: نور
+- English display name: NOOR2
+- Android application ID: `io.github.muawiyaabdellattifalt.noor2`
+- Publisher identity: NOOR2 Project
+- Support email: `muawiyaabdellattif@gmail.com`
+- Debug display name: NOOR2 Debug
+- Production display name: NOOR2
+
+This identity must be used when creating the Android project unless a later approved decision explicitly replaces it.
